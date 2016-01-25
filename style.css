@@ -51,5 +51,7 @@ table {
 
 
 html{
-    background-image:url(images.jpg)
+    background-image:url(images.jpg);
+    backface-visibility: visible;
+    background-position: center;
 }
