@@ -13,5 +13,25 @@
   </head>
   <body>
       <a href="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjbhojCtbvKAhUEVhoKHXfZC6cQjRwIBw&url=https%3A%2F%2Fwallpaperscraft.com%2Fdownload%2Fcity_night_lights_city_lights_buildings_sky_832%2F1680x1050&bvm=bv.112064104,d.d24&psig=AFQjCNGZVg3UiChAqoMr0JjP3oN484FgIA&ust=1453483267432488"></a>
-      <div class="expanded row">
-          <div class="expanded row header">
+    <div id="table-scroll">
+        <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" id="header-fixed" width="100%" overflow="scroll" class="scrollTable">
+            <body>
+                <ul>
+                <li>
+                    <tr>
+                    <th>Order ID</th>
+                </tr>
+
+            <tbody>
+                <tr>
+                    <td><%=snd.getOrderId()%></td>
+                    <td><%=snd.getDateCaptured()%></td>
+                    <td><%=snd.getOrderStatus()%></td>
+                    <td>Data Not Available</td>
+                    <td>Data Not Available</td>
+                    <td>Data Not Available</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
