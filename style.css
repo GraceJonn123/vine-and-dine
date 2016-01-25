@@ -50,7 +50,7 @@ table {
 }
 
 
-body{
+content{
     background-image:url(images.jpg);
     backface-visibility: visible;
     background-position: center;
