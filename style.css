@@ -31,7 +31,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-    background-color: purple;
 }
 ol, ul {
 	list-style: none;
@@ -44,14 +43,38 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+body{
+    background-image:url(bacon.JPG);
+		background-repeat: no-repeat;
+		background-size: cover;
+    backface-visibility: visible;
+		background-attachment: fixed;
+    background-position: center;
+		font-size: 200%;
+}
+.row-content{
+	padding: 25px;
 }
 
+.scroll {
+	background-color: peach;
+	width: 500px;
+	height: 200px;
+	padding: 20px;
+	overflow: scroll;
+	border: 3px solid black;
+}
 
-.content{
-    background-image:url(images.jpg);
-    backface-visibility: visible;
-    background-position: center;
+.hidden {
+	background-color: brown;
+	width: 500px;
+	height: 200px;
+	overflow: hidden;
+}
+p{
+	padding: 9px;
+	color: #841B2D;
+}
+h3{
+	padding: 20px;
 }
