@@ -15,7 +15,7 @@
   <body>
     <div class="bodi">
     <div id="table-scroll">
-      <h1>Vine
+      <h1>Vine n Dine</h1>
 
 <h2>Hello! Welcome to Vine and Dine ordering hub! Please pick something. Thank you!</h2>
                 <div class="row-content">
@@ -66,14 +66,14 @@
               $('#messageInput').val('');
             }
           });
-          // myDataRef.on('child_added', function(snapshot) {
-          //   var message = snapshot.val();
-          //   displayChatMessage(message.name, message.text);
-          // });
-          // function displayChatMessage(food, drinks, message,contacts) {
-          //   $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
-          //   $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
-          // };
+           myDataRef.on('child_added', function(snapshot) {
+             var message = snapshot.val();
+             displayChatMessage(message.name, message.text);
+           });
+           function displayChatMessage(food, drinks, message,contacts) {
+             $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+             $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+           };
         </script>
         <footer></footer>
       </div>
