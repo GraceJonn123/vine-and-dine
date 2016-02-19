@@ -44,5 +44,22 @@
                     </tr>
                 </div>
     </div>
+    <input type='text' id='foodInput' placeholder='*Food'>
+   <input type='text' id='drinkInput' placeholder='*Drink'>
+   <input type='text' id='messageInput' placeholder='*Any specifications">
+   <input type='number' id='numberInput' placeholder='*Your number'>
+   <script>
+     var myDataRef = new Firebase('https://djn3x2sv7cl.firebaseio-demo.com/');
+     $('#messageInput').keypress(function (e) {
+       if (e.keyCode == 13) {
+         var food = $('#foodInput').val();
+         var drink = $('#drinkInput').val();
+         var message = $('#messageInput').val();
+         var number = $('#numberInput').val();
+         myDataRef.set({food: name, drink: text});
+         $('#messageInput').val('');
+       }
+     });
+   </script>
 </body>
 </html>
