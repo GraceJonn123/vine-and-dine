@@ -44,22 +44,33 @@
                     </tr>
                 </div>
     </div>
-    <input type='text' id='foodInput' placeholder='*Food'>
-   <input type='text' id='drinkInput' placeholder='*Drink'>
-   <input type='text' id='messageInput' placeholder='*Any specifications">
-   <input type='number' id='numberInput' placeholder='*Your number'>
-   <script>
-     var myDataRef = new Firebase('https://djn3x2sv7cl.firebaseio-demo.com/');
-     $('#messageInput').keypress(function (e) {
-       if (e.keyCode == 13) {
-         var food = $('#foodInput').val();
-         var drink = $('#drinkInput').val();
-         var message = $('#messageInput').val();
-         var number = $('#numberInput').val();
-         myDataRef.set({food: name, drink: text});
-         $('#messageInput').val('');
-       }
-     });
-   </script>
+    <div id='messagesDiv'></div>
+    <input type='text' id='foodInput' placeholder='*Name'>
+    <input type='text' id="drinksInput" placeholder="*Drinks">
+    <input type="text" id="contactsInput" placeholder="*Your number">
+    <input type='text' id='messageInput' placeholder='*Specification'>
+
+    <script>
+          var myDataRef = new Firebase('https://jijjy.firebaseIO.com/');
+          $('#messageInput').keypress(function (e) {
+            if (e.keyCode == 13) {
+              var food = $('#foodInput').val();
+              var drinks = $('#drinksInput').val();
+              var message = $('#messageInput').val();
+              var contacts = $('#contactsInput').val();
+              myDataRef.push({food: food, drinks: drinks, contacts; contacts });
+              $('#messageInput').val('');
+            }
+          });
+          myDataRef.on('child_added', function(snapshot) {
+            var message = snapshot.val();
+            displayChatMessage(message.name, message.text);
+          });
+          function displayChatMessage(food, drinks, message,contacts) {
+            $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+            $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+          };
+        </script>
+        <footer></footer>
 </body>
 </html>
