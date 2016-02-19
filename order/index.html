@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
     <center>
 
          <head>
@@ -8,12 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Vine n Dine</title>
     <link rel="stylesheet" href="css/foundation.css" />
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet/style.css">
   <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
   </head>
-  <body id="tint">
+  <body>
+    <div class="bodi">
     <div id="table-scroll">
+      <h1>Vine
+
+<h2>Hello! Welcome to Vine and Dine ordering hub! Please pick something. Thank you!</h2>
                 <div class="row-content">
                 <div class="medium-6 columns">
                     <h3>FOOD</h3>
@@ -45,32 +49,33 @@
                 </div>
     </div>
     <div id='messagesDiv'></div>
-    <input type='text' id='foodInput' placeholder='*Name'>
-    <input type='text' id="drinksInput" placeholder="*Drinks">
-    <input type="text" id="contactsInput" placeholder="*Your number">
+    <input type='text' id='foodInput' placeholder='*Food'>
+    <input type='text' id='drinksInput' placeholder='*Drinks'>
+    <input type='text' id='contactsInput' placeholder='*Your number'>
     <input type='text' id='messageInput' placeholder='*Specification'>
 
     <script>
-          var myDataRef = new Firebase('https://jijjy.firebaseIO.com/');
+          var myDataRef = new Firebase('https://jijjy.firebaseio.com/');
           $('#messageInput').keypress(function (e) {
             if (e.keyCode == 13) {
               var food = $('#foodInput').val();
               var drinks = $('#drinksInput').val();
-              var message = $('#messageInput').val();
               var contacts = $('#contactsInput').val();
-              myDataRef.push({food: food, drinks: drinks, contacts; contacts });
+              var message = $('#messageInput').val();
+              myDataRef.push({food: food, drinks: drinks, contacts: contacts, message: message });
               $('#messageInput').val('');
             }
           });
-          myDataRef.on('child_added', function(snapshot) {
-            var message = snapshot.val();
-            displayChatMessage(message.name, message.text);
-          });
-          function displayChatMessage(food, drinks, message,contacts) {
-            $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
-            $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
-          };
+          // myDataRef.on('child_added', function(snapshot) {
+          //   var message = snapshot.val();
+          //   displayChatMessage(message.name, message.text);
+          // });
+          // function displayChatMessage(food, drinks, message,contacts) {
+          //   $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+          //   $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+          // };
         </script>
         <footer></footer>
+      </div>
 </body>
 </html>
