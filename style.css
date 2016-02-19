@@ -44,7 +44,7 @@ q:before, q:after {
 	content: none;
 }
 body{
-    background-image:url(bacon.JPG);
+    background-image:url(tea.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
     backface-visibility: visible;
@@ -57,7 +57,6 @@ body{
 }
 
 .scroll {
-	background-color: peach;
 	width: 500px;
 	height: 200px;
 	padding: 20px;
@@ -73,8 +72,9 @@ body{
 }
 p{
 	padding: 9px;
-	color: #841B2D;
+	color:#FDEE00;
 }
 h3{
 	padding: 20px;
+	color:green;
 }
